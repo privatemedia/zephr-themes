@@ -1,8 +1,9 @@
-<div class="pm-offer pm-single-offer {{#offer-featured}} pm-featured {{/offer-featured}}">
+<a class="pm-offer pm-single-offer {{#offer-featured}} pm-featured {{/offer-featured}}" href="{{offer-url}}">
 	<div class="pm-offer-content">
+		{{#best-deal-text}}<h5>{{best-deal-text}}</h5>{{/best-deal-text}}
 		<h4>{{offer-heading}} {{#offer-price}}$<span class="{{#offer-sale-price}}pm-strike-through{{/offer-sale-price}}">{{offer-price}}</span>{{/offer-price}}{{#offer-sale-price}}$<span>{{offer-sale-price}}</span>{{/offer-sale-price}}</h4>
 		{{#offer-description}}<p>{{offer-description}}</p>{{/offer-description}}
 	</div>
 	
-	{{#offer-url}}<a class="pm-offer-link" href="{{offer-url}}"><i class="fas fa-arrow-circle-right"></i></a>{{/offer-url}}
-</div>
+	<span class="pm-offer-link"><i class="fas fa-arrow-circle-right"></i></span>
+</a>
