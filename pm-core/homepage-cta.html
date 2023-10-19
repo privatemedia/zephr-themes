@@ -1,0 +1,16 @@
+<section class="pm-cta-block wp-block pm-section-block page has-bg textured-{{background-colour}}">
+	<div class="container">
+		<div class="grid">
+			<div class="grid__col-5 tablet-grid__col-6 pm-cta-block__text">
+				{{#heading}}<h2>{{heading}}</h2>{{/heading}}
+				{{#content}}<div>{{content}}</div>{{/content}}
+				{{#button-text}}<a class="button" href="{{button-url}}"{{#open-in-new-window}} target="_blank"{{/open-in-new-window}}>{{button-text}}</a>{{/button-text}}
+			</div>
+			<div class="grid__col-7 tablet-grid__col-6 pm-cta-block__image">
+				{{#desktop-image-url}}<div class="desktop_image{{#tablet-image-url}} tablet_hide{{/tablet-image-url}}{{#mobile-image-url}} mobile_hide{{/mobile-image-url}}"><img src="{{desktop-image-url}}" /></div>{{/desktop-image-url}}
+				{{#tablet-image-url}}<div class="tablet_image tablet_show{{#mobile-image-url}} small_mobile_hide{{/mobile-image-url}}"><img src="{{tablet-image-url}}" /></div>{{/tablet-image-url}}
+				{{#mobile-image-url}}<div class="mobile_image small_mobile_show tablet_hide"><img src="{{mobile-image-url}}" /></div>{{/mobile-image-url}}
+			</div>
+		</div>
+	</div>
+</section>
