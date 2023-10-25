@@ -3,5 +3,5 @@
     <p class="title">{{product-name}} <span class="test_mobile_inline">subscription</span></p>
     <p class="price"><span class="price"><span class="raw">${{product-price}}</span></span></p>
     {{#product-description}}<div class="content">{{{product-description}}}</div>{{/product-description}}
-    <a href="?t={{product-id}}" class="button {{#best-deal-text}} selected {{/best-deal-text}}">Switch plan</a>
+    <a href="?t={{product-id}}" product-id="{{product-id}}" class="pm-product-switch-btn button {{#best-deal-text}} selected {{/best-deal-text}}">Switch plan</a>
 </div>
