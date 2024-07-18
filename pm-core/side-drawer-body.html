@@ -4,3 +4,22 @@
   <li><a id="zephr-newsletter-link" href="/newsletters">Newsletters</a></li>
   <li><a id="zephr-logout-link" href="/logout">Log Out</a></li>
 </ul>
+<script>
+    //event listener for the logout functionality
+    document.getElementById('zephr-logout-link').addEventListener('click', function(event) {
+        event.preventDefault();  // Prevent the default link behavior
+        // Make a POST request to logout
+        fetch('/blaize/logout', {
+            method: 'POST'
+        }).then(response => {
+            if (response.ok) {
+                // Reload the page after successful logout
+                window.location.reload();
+            } else {
+                console.error('Logout failed:', response.status);
+            }
+        }).catch(error => {
+            console.error('Error during logout:', error);
+        });
+    });
+</script>
