@@ -1,17 +1,24 @@
-price-1-title
-price-1-heading
-price-1-secondaryheading
-price-1-description
-price-1-button-text
-price-1-button-link
+<div>
+  <h2 id="zephr-paywall-heading">{{paywall-heading}}</h2>
+  <p id="zephr-paywall-description">{{paywall-description}}</p>
+  
+  {{#paywall-link-text}}
+    <a href="{{paywall-link-url}}" id="zephr-paywall-link">{{.}}</a>
+  {{/paywall-link-text}}
+</div>
 
-price-2-title
-price-2-heading
-price-2-description
-price-2-button-text
-price-2-button-link
+<div>
+  <div>
+    <h4>{{price-1-title}}</h4>
+    <h3>{{price-1-heading}}</h3> <h3>{{price-1-secondaryheading}}</h3>
+    {{price-1-description}}
+    <a href="{{price-1-button-link}}" >{{price-1-button-text}}</a>
+  </div>
 
-paywall-heading
-paywall-description
-paywall-link-text
-paywall-link-url
+  <div>
+    <h4>{{price-2-title}}</h4>
+    <h3>{{price-2-heading}}</h3>
+    {{price-2-description}}
+    <a href="{{price-2-button-link}}" >{{price-2-button-text}}</a>
+  </div>
+</div>
